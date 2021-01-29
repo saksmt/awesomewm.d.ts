@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "rootDir": ".",
+    "baseUrl": ".",
+    "target": "esnext",
+    "lib": ["esnext"],
+    "moduleResolution": "node",
+    "types": ["lua-types/5.3", "typescript-to-lua/language-extensions"],
+    "strict": true
+  },
+  "include": ["."],
+  "tstl": {
+    "luaTarget": "5.3",
+    "luaLibImport": "always",
+    "noImplicitSelf": true,
+    "noHeader": true
+  }
+}

@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+resolution=${1:?"Screen resolution in HxW format is mandatory"}
+
+DPI=${DPI:-$(xrdb -query | grep dpi | cut -f2)}
+dpiPart=
+[[ n"${DPI}" != "n" ]] && dpiPart="-dpi ${DPI}"
+
+Xephyr :11 $dpiPart -screen ${resolution} &
+xpid=$!
+DISPLAY=:11 awesome -c ./rc.lua
+wait ${xpid}
