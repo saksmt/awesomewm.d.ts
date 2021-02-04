@@ -3,6 +3,21 @@
   "version": "0.0.1-rc1",
   "description": "typescript type declarations for awesomewm (4.3) based on typescript-to-lua",
   "main": "",
+  "bugs": {
+    "url": "https://github.com/saksmt/awesomewm.d.ts/issues"
+  },
+  "homepage": "https://github.com/saksmt/awesomewm.d.ts",
+  "keywords": [
+    "awesomewm",
+    "awesome",
+    "typescript",
+    "tstl"
+  ],
+  "readme": "../README.md",
+  "repository": {
+    "url": "git@github.com:saksmt/awesomewm.d.ts.git",
+    "type": "git"
+  },
   "scripts": {
     "format": "prettier --write .",
     "format-check": "prettier --check .",
@@ -13,7 +28,11 @@
     "**/*.ts"
   ],
   "types": "index.d.ts",
-  "author": "saksmt <smt@saksmt.dev>",
+  "author": {
+    "name": "Kirill Saksin",
+    "email": "smt@saksmt.dev",
+    "url": "https://saksmt.dev"
+  },
   "license": "MIT",
   "prettier": {
     "trailingComma": "all",
