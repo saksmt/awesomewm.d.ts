@@ -37,6 +37,7 @@ declare module 'wibox' {
   export * from 'awesomewm.4.3.ts.d/wibox';
 }
 
+/** @noResolution */
 declare module 'oocairo' {
   export * from 'awesomewm.4.3.ts.d/oocairo';
 }

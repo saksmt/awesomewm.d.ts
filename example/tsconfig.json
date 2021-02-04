@@ -9,7 +9,6 @@
   },
   "tstl": {
     "luaTarget": "5.3",
-    "luaLibImport": "always",
     "noImplicitSelf": true,
     "noHeader": true,
     "luaBundle": "./rc.lua",
