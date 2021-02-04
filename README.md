@@ -1,6 +1,6 @@
 # awesomewm.ts.d
 
-![build](https://github.com/saksmt/awesomewm.d.ts/workflows/build/badge.svg)
+![build](https://github.com/saksmt/awesomewm.d.ts/workflows/build/badge.svg) ![npm](https://img.shields.io/npm/v/awesomewm.4.3.ts.d)
 
 Typescript typings for [awesome window manager](https://github.com/awesomeWM/awesome) to be used with
 [typescript-to-lua](https://github.com/TypeScriptToLua/TypeScriptToLua) transpiler

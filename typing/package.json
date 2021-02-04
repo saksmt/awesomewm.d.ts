@@ -13,7 +13,7 @@
     "typescript",
     "tstl"
   ],
-  "readme": "../README.md",
+  "readme": "./README.md",
   "repository": {
     "url": "git@github.com:saksmt/awesomewm.d.ts.git",
     "type": "git"
