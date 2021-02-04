@@ -1,5 +1,7 @@
 # awesomewm.ts.d
 
+![build](https://github.com/saksmt/awesomewm.d.ts/workflows/build/badge.svg)
+
 Typescript typings for [awesome window manager](https://github.com/awesomeWM/awesome) to be used with
 [typescript-to-lua](https://github.com/TypeScriptToLua/TypeScriptToLua) transpiler
 
@@ -105,7 +107,7 @@ Otherwise, it will fail in runtime.
 You may want to pay attention to [this bug](https://github.com/TypeScriptToLua/TypeScriptToLua/issues/976) if you've decided 
 to split your single `rc.ts` into files and more importantly packages since it will blow up in runtime and not on compiletime.
 
-## What does work?
+## What doesn't work?
 
 I've typed almost everything from awesome, but not quite... There are no types for:
  - `awful.util` - it is mostly deprecated anyway
