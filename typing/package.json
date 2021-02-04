@@ -1,6 +1,6 @@
 {
   "name": "awesomewm.4.3.ts.d",
-  "version": "0.0.1",
+  "version": "0.0.1-rc1",
   "description": "typescript type declarations for awesomewm (4.3) based on typescript-to-lua",
   "main": "",
   "scripts": {

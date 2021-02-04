@@ -156,4 +156,4 @@ So report them as soon as you find them or even fix and pull-request!
 
 ## License
 
-This library is licensed under [MIT]() license. For licenses on awesome, typescript and tstl see corresponding pages.
+This library is licensed under [MIT](LICENSE) license. For licenses on awesome, typescript and tstl see corresponding pages.
