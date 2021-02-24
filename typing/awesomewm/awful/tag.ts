@@ -51,7 +51,7 @@ export type TagModule = {
     restore(this: void, screen: ScreenRef, index?: Index): void;
     limit: number;
   };
-  incwmfact(this: void, add: Fraction, tag?: Tag): void;
+  incmwfact(this: void, add: Fraction, tag?: Tag): void;
   incgap(this: void, add: RealNumber, tag?: Tag): void;
   togglemfpol(this: void, tag?: Tag): void;
   incnmaster(this: void, add: IntegralNumber, tag?: Tag | null, sensible?: boolean): void;
@@ -64,15 +64,31 @@ export type TagModule = {
   viewtoggle(this: void, tag: Tag): void;
   find_by_name(this: void, screen: ScreenRef, name: string): Tag | null;
   attached_connect_signal: {
-    (this: void, screen: ScreenRef, name: 'request::select', cb: (this: void) => void): void;
-    (this: void, screen: ScreenRef, name: 'tagged', cb: (this: void, client: Client) => void): void;
     (
       this: void,
-      screen: ScreenRef,
-      name: 'untagged',
-      cb: (this: void, client: Client) => void,
+      screen: ScreenRef | null,
+      name: 'request::select',
+      cb: (this: void, tag: Tag) => void,
     ): void;
-    (this: void, screen: ScreenRef, name: 'request::screen', cb: (this: void) => void): void;
+    (
+      this: void,
+      screen: ScreenRef | null,
+      name: 'tagged',
+      cb: (this: void, tag: Tag) => void,
+    ): void;
+    (
+      this: void,
+      screen: ScreenRef | null,
+      name: 'untagged',
+      cb: (this: void, tag: Tag) => void,
+    ): void;
+    (
+      this: void,
+      screen: ScreenRef | null,
+      name: 'request::screen',
+      cb: (this: void, tag: Tag) => void,
+    ): void;
+    (this: void, screen: ScreenRef | null, name: string, cb: (this: void, tag: Tag) => void): void;
   };
   layouts: Layout[];
 };

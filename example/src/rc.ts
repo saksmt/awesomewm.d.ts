@@ -229,11 +229,11 @@ const globalKeys = table.join<awful.Key<Screen>>(
     description: 'quit',
     group: 'awesome',
   }),
-  awful.key([modkey], 'l', () => tag.incwmfact(0.05), {
+  awful.key([modkey], 'l', () => tag.incmwfact(0.05), {
     description: 'increase master width factor',
     group: 'layout',
   }),
-  awful.key([modkey], 'h', () => tag.incwmfact(-0.05), {
+  awful.key([modkey], 'h', () => tag.incmwfact(-0.05), {
     description: 'decrease master width factor',
     group: 'layout',
   }),

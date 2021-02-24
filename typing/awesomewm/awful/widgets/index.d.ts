@@ -22,7 +22,7 @@ export const layoutlist: LayoutListModule;
 
 import { OnlyOnScreenModule } from './onlyonscreen';
 export { OnlyOnScreen } from './onlyonscreen';
-export const onlyonscreen: OnlyOnScreenModule;
+export const only_on_screen: OnlyOnScreenModule;
 
 import { PromptModule } from './prompt';
 export { Prompt } from './prompt';

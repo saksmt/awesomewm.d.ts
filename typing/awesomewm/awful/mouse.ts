@@ -3,7 +3,7 @@ import { Client } from './client';
 import { Screen } from './screen';
 import { Point, PositiveReal, RealNumber, Geometry } from '../common';
 
-export type MouseModule = {
+export type Mouse = {
   readonly is_left_mouse_button_pressed: boolean;
   readonly is_middle_mouse_button_pressed: boolean;
   readonly is_right_mouse_button_pressed: boolean;
@@ -14,6 +14,11 @@ export type MouseModule = {
   readonly current_wibox: DrawableLike | null;
   readonly current_widgets: DrawableLike[] | null;
   readonly current_widget: DrawableLike | null;
+
+  coords(this: void, newCoords?: Point, silent?: boolean): Point;
+};
+
+export type MouseModule = {
   resize: {
     set_mode(mode: 'live' | 'after'): void;
   };
@@ -39,5 +44,4 @@ export type MouseModule = {
   wibox: {
     move(this: void, wibox: DrawableLike): void;
   };
-  coords(this: void, newCoords?: Point, silent?: boolean): Point;
 };

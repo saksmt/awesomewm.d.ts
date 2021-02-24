@@ -7,6 +7,7 @@ import { Screen } from './awful/screen';
 import { PositiveReal, RealNumber, UntypedFunction } from './common';
 import { Tag } from './awful/tag';
 import { Client } from './awful/client';
+import { Mouse } from './awful/mouse';
 
 declare global {
   export type FileDescriptor = number;
@@ -28,6 +29,8 @@ declare global {
     };
     emit_signal(this: void, name: string, ...signalArguments: unknown[]): void;
   };
+
+  export const mouse: Mouse;
 
   export const screen: {
     fake_add(
@@ -85,6 +88,7 @@ declare global {
         name: 'swapped',
         cb: (this: void, client: Client, other: Client, is_source: boolean) => void,
       ): void;
+      (this: void, name: string, cb: (this: void, client: Client) => void): void;
     };
     disconnect_signal(name: string, cb: UntypedFunction): void;
   };
