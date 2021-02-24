@@ -142,7 +142,7 @@ No, and probably won't ever be for two reasons:
 
 ## More complex examples?
 
-On the way - rewriting my current config right now (not in public git for now).
+Here is a [sample](https://github.com/saksmt/awesomewm-iwm) (work in progress, but I use it)
 
 ## Bugs
 
