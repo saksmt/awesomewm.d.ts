@@ -1,8 +1,12 @@
 name: release
+permissions:
+  id-token: write
+  contents: read
 
 on:
-  release:
-    types: [created]
+  push:
+    tags:
+      - 'v*'
 
 jobs:
   build:
@@ -10,14 +14,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v4
+      - name: Use Node.js 24
+        uses: actions/setup-node@v4
         with:
-          node-version: 12
+          node-version: 24
 
       - name: typing / install deps
         run: npm ci
+        working-directory: typing
+      - name: typing / typecheck
+        run: npm run typecheck
         working-directory: typing
       - name: typing / lint
         run: npm run lint
@@ -43,14 +50,14 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v4
+      - name: copy readme and license from repo root to package root
+        run: cp *.md LICENSE typing
+      - uses: actions/setup-node@v4
         with:
-          node-version: 12
+          node-version: 24
           registry-url: https://registry.npmjs.org/
       - run: npm ci
         working-directory: typing
       - run: npm publish
         working-directory: typing
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}

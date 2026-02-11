@@ -3,7 +3,7 @@
     "target": "esnext",
     "lib": ["esnext"],
     "moduleResolution": "node",
-    "types": ["lua-types/5.3", "typescript-to-lua/language-extensions", "awesomewm.4.3.ts.d"],
+    "types": ["lua-types/5.3", "@typescript-to-lua/language-extensions", "awesomewm.4.3.d.ts"],
     "strict": true,
     "rootDir": "src"
   },

@@ -4,11 +4,12 @@
     "baseUrl": ".",
     "target": "esnext",
     "lib": ["esnext"],
+    "module": "None",
     "moduleResolution": "node",
-    "types": ["lua-types/5.3", "typescript-to-lua/language-extensions"],
+    "types": ["lua-types/5.3", "@typescript-to-lua/language-extensions"],
     "strict": true
   },
-  "include": ["."],
+  "include": ["./**.d.ts"],
   "tstl": {
     "luaTarget": "5.3",
     "luaLibImport": "always",

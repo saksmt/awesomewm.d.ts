@@ -1,11 +1,12 @@
 {
-  "name": "awesomewm.4.3.ts.d",
-  "version": "0.0.1-rc2",
+  "name": "awesomewm.4.3.d.ts",
+  "version": "0.0.1",
   "description": "typescript type declarations for awesomewm (4.3) based on typescript-to-lua",
   "main": "",
   "bugs": {
     "url": "https://github.com/saksmt/awesomewm.d.ts/issues"
   },
+  "type": "module",
   "homepage": "https://github.com/saksmt/awesomewm.d.ts",
   "keywords": [
     "awesomewm",
@@ -22,7 +23,8 @@
     "format": "prettier --write .",
     "format-check": "prettier --check .",
     "lint": "eslint '*/**/*.{js,jsx,ts,tsx}'",
-    "lint-fix": "eslint '*/**/*.{js,jsx,ts,tsx}' --fix"
+    "lint-fix": "eslint '*/**/*.{js,jsx,ts,tsx}' --fix",
+    "typecheck": "tsc --noEmit"
   },
   "files": [
     "**/*.ts"
@@ -43,15 +45,16 @@
     "tabWidth": 2
   },
   "dependencies": {
-    "lua-types": "^2.8.0"
+    "lua-types": "^2.13.1"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.14.1",
-    "@typescript-eslint/parser": "^4.14.1",
-    "eslint": "^7.19.0",
-    "eslint-config-prettier": "^7.2.0",
-    "prettier": "^2.2.0",
-    "typescript": "^4.1.3",
-    "typescript-to-lua": "^0.37.1"
+    "@typescript-eslint/eslint-plugin": "^8.54.0",
+    "@typescript-eslint/parser": "^8.54.0",
+    "eslint": "9.26.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "prettier": "^3.8.1",
+    "typescript": "^5.9.3",
+    "typescript-to-lua": "^1.33.2"
   }
 }
